@@ -2,11 +2,13 @@
 <aside class="right-side">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-        <h1>
-            <?php $icon = end($breadcrumb)['icon']; ?>
-            <i class="<?php echo (strpos($icon,'fa-')!==false)?'fa':'glyphicon '; ?> {{$icon}}"></i>
-            {{end($breadcrumb)['title']}}
-        </h1>
+        @if(isset($breadcrumb))
+            <h1>
+                <?php $icon = end($breadcrumb)['icon']; ?>
+                <i class="<?php echo (strpos($icon,'fa-')!==false)?'fa':'glyphicon '; ?> {{$icon}}"></i>
+                {{end($breadcrumb)['title']}}
+            </h1>
+        @endif
         {{ isset($breadcrumb) ? \Jakubsacha\Adminlte\Helpers\Breadcrumbs::create($breadcrumb) : ''; }}
     </section>
 
