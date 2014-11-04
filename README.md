@@ -50,6 +50,10 @@ php artisan asset:publish
 
 ###### Done!
 
+Now visit the 
+
+yourdomainname.com/dashboard/login
+
 ### LICENCE
 MIT
 
